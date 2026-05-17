@@ -9,8 +9,10 @@ export default function LandingPage() {
     <div className="font-sans">
       <Navbar />
       <HeroSection />
-      <AboutSection />
-      <StepsSection />
+      <div className="relative bg-white">
+        <AboutSection />
+        <StepsSection />
+      </div>
       <Footer />
     </div>
   );
