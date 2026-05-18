@@ -3,18 +3,24 @@ import { LogOut } from "lucide-react";
 
 const CertificateNavbar = () => {
   return (
-    <nav className="bg-white shadow-md rounded-b-3xl px-10 py-5 flex justify-between items-center">
-      <div>
-        <h1 className="text-3xl font-extrabold text-slate-900">
-          The UB <span className="text-yellow-500">Ally</span>
-        </h1>
-        <p className="text-xs text-gray-500">Brawijaya Student Alliance</p>
-      </div>
+    <nav className="bg-white shadow-md rounded-b-[28px] border-b border-slate-200">
+      <div className="max-w-[1440px] mx-auto px-8 py-5 flex justify-between items-center">
+        {/* LOGO */}
+        <div className="leading-none">
+          <h1 className="text-[42px] font-black text-[#06255D]">
+            The UB <span className="text-[#D6A12E]">Ally</span>
+          </h1>
+          <p className="text-[12px] text-slate-500 font-medium mt-1">
+            Brawijaya Student Alliance
+          </p>
+        </div>
 
-      <button className="flex items-center gap-2 font-bold text-xl hover:text-yellow-500 transition">
-        Logout
-        <LogOut size={22} />
-      </button>
+        {/* LOGOUT */}
+        <button className="flex items-center gap-3 text-[#06255D] font-black text-[24px] hover:opacity-80 transition">
+          Logout
+          <LogOut size={24} />
+        </button>
+      </div>
     </nav>
   );
 };

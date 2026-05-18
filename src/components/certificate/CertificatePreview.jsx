@@ -1,61 +1,89 @@
 import React from "react";
-import { GraduationCap, Download } from "lucide-react";
+import { Download, GraduationCap, Award } from "lucide-react";
 
 const CertificatePreview = () => {
-  const handleDownload = () => {
-    console.log("download certificate");
-  };
-
   return (
-    <div className="flex flex-col gap-6">
-      <div className="bg-white rounded-3xl border-4 border-slate-800 shadow-md p-10">
+    <div className="flex flex-col gap-4">
+      {/* CERTIFICATE */}
+      <div className="bg-white border-[5px] border-[#06255D] rounded-[32px] shadow-md px-8 py-8">
         <div className="text-center">
-          <div className="w-20 h-20 rounded-full bg-[#06255D] flex items-center justify-center mx-auto mb-6">
-            <GraduationCap className="text-yellow-400" size={40} />
+          {/* ICON */}
+          <div className="w-16 h-16 rounded-full bg-[#06255D] flex items-center justify-center mx-auto">
+            <GraduationCap size={28} className="text-[#D6A12E]" />
           </div>
 
-          <p className="font-bold uppercase tracking-wide">
+          {/* HEADER */}
+          <p className="mt-6 text-[14px] font-black uppercase">
             Official Certificate of Completion
           </p>
 
-          <h2 className="text-5xl font-extrabold text-[#06255D] mt-4">
+          {/* TITLE */}
+          <h2 className="mt-4 text-[42px] font-black text-[#06255D]">
             THE CAMPUS MASTER
           </h2>
 
-          <p className="mt-8 text-xl">This is to certify that</p>
+          {/* SUB */}
+          <p className="mt-6 text-[20px] font-semibold">
+            This is to certify that
+          </p>
 
-          <h3 className="text-5xl font-extrabold mt-3">
+          {/* NAME */}
+          <h3 className="mt-4 text-[44px] font-black text-black">
             Bagas Dwitama
           </h3>
 
-          <p className="text-xl mt-2">NIM: 215020207111069</p>
+          <div className="w-[320px] h-[3px] bg-[#D6A12E] mx-auto mt-2"></div>
 
-          <p className="max-w-3xl mx-auto mt-8 text-xl leading-relaxed">
-            Has successfully demonstrated exceptional readiness in physical
-            mobility, digital systems, social networking, and cultural adaptation
-            at Universitas Brawijaya.
+          {/* NIM */}
+          <p className="mt-3 text-[18px] font-medium">
+            NIM: 215020207111069
           </p>
 
-          <div className="grid grid-cols-2 mt-14">
+          {/* DESC */}
+          <p className="mt-8 max-w-[620px] mx-auto text-[20px] leading-relaxed text-slate-700">
+            Has successfully demonstrated exceptional readiness in
+            physical mobility, digital systems, social networking, and
+            cultural adaptation at Universitas Brawijaya.
+          </p>
+
+          {/* FOOTER */}
+          <div className="grid grid-cols-3 items-end mt-12">
+            {/* SIGN */}
             <div>
-              <p className="italic text-3xl">The UB Ally Team</p>
-              <p className="font-bold text-xl mt-2">AUTHORIZED SIGNATURE</p>
+              <p className="italic text-[28px]">Lavina M</p>
+              <div className="w-44 h-[3px] bg-[#D6A12E] mx-auto mt-2"></div>
+              <p className="mt-2 text-[16px] font-black text-[#06255D]">
+                THE UB ALLY TEAM
+              </p>
             </div>
 
+            {/* SEAL */}
+            <div className="flex justify-center">
+              <Award size={50} className="text-[#D6A12E]" />
+            </div>
+
+            {/* DATE */}
             <div>
-              <p className="font-bold text-2xl">AUGUST 2026</p>
-              <p className="font-bold text-xl mt-2">DATE OF ISSUE</p>
+              <p className="text-[24px] font-black">
+                AUGUST 2026
+              </p>
+              <div className="w-44 h-[3px] bg-[#D6A12E] mx-auto mt-2"></div>
+              <p className="mt-2 text-[16px] font-black text-[#06255D]">
+                DATE OF ISSUE
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <button
-        onClick={handleDownload}
-        className="bg-yellow-500 hover:bg-yellow-400 transition rounded-2xl shadow-md py-6 text-3xl font-extrabold text-slate-900 flex items-center justify-center gap-3"
-      >
-        <Download size={30} />
-        DOWNLOAD YOUR CERTIFICATE
+      {/* DOWNLOAD */}
+      <button className="bg-[#D6A12E] hover:bg-[#C79420] transition rounded-[20px] py-5 shadow-md">
+        <div className="flex items-center justify-center gap-3">
+          <Download size={26} className="text-[#06255D]" />
+          <span className="text-[24px] font-black text-[#06255D]">
+            DOWNLOAD YOUR CERTIFICATE
+          </span>
+        </div>
       </button>
     </div>
   );

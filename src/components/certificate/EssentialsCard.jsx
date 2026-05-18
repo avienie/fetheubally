@@ -1,46 +1,90 @@
 import React from "react";
-import { Camera, Globe, BookOpen } from "lucide-react";
-
-const essentials = [
-  {
-    icon: <Camera size={18} />,
-    title: "Official Instagram",
-    subtitle: "@univ.brawijaya",
-    desc: "Campus news & updates",
-  },
-  {
-    icon: <Globe size={18} />,
-    title: "New Student Portal",
-    subtitle: "selma.ub.ac.id",
-    desc: "Admissions & general info",
-  },
-  {
-    icon: <BookOpen size={18} />,
-    title: "Academic System",
-    subtitle: "siam.ub.ac.id",
-    desc: "Schedules, study plans, & grades",
-  },
-];
 
 const EssentialsCard = () => {
   return (
-    <div className="bg-white rounded-3xl shadow-md p-6">
-      <h3 className="text-3xl font-bold mb-5 flex items-center gap-2">
+    <div className="bg-white rounded-[32px] shadow-md border border-slate-200 px-8 py-8">
+      {/* TITLE */}
+      <h2 className="text-[28px] font-black text-black flex items-center gap-3">
         🔗 Brawijaya Essentials
-      </h3>
+      </h2>
 
-      <div className="space-y-6">
-        {essentials.map((item, idx) => (
-          <div key={idx} className="flex gap-3">
-            <div className="text-blue-700 mt-1">{item.icon}</div>
+      {/* SUBTEXT */}
+      <p className="mt-4 text-[18px] leading-relaxed text-slate-600">
+        Stay connected and informed with these
+        <br />
+        official resources:
+      </p>
 
-            <div>
-              <h4 className="font-bold text-lg">{item.title}</h4>
-              <p className="font-medium">{item.subtitle}</p>
-              <p className="text-sm text-gray-500">{item.desc}</p>
-            </div>
+      {/* DIVIDER */}
+      <div className="mt-6 h-[2px] bg-slate-300"></div>
+
+      {/* ITEMS */}
+      <div className="mt-8 flex flex-col gap-8">
+        {/* INSTAGRAM */}
+        <div className="flex items-start gap-4">
+          {/* GANTI DENGAN ICON FIGMA */}
+          <div className="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center text-xl">
+            📷
           </div>
-        ))}
+
+          <div>
+            <h3 className="text-[20px] font-black text-black">
+              Official Instagram
+            </h3>
+
+            <p className="text-[17px] font-medium text-slate-700">
+              @univ.brawijaya
+            </p>
+
+            <p className="text-[15px] text-slate-500 mt-1">
+              Campus news & updates
+            </p>
+          </div>
+        </div>
+
+        {/* PORTAL */}
+        <div className="flex items-start gap-4">
+          {/* GANTI DENGAN ICON FIGMA */}
+          <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-xl">
+            🌐
+          </div>
+
+          <div>
+            <h3 className="text-[20px] font-black text-black">
+              New Student Portal
+            </h3>
+
+            <p className="text-[17px] font-medium text-slate-700">
+              selma.ub.ac.id
+            </p>
+
+            <p className="text-[15px] text-slate-500 mt-1">
+              Admissions & general info
+            </p>
+          </div>
+        </div>
+
+        {/* ACADEMIC */}
+        <div className="flex items-start gap-4">
+          {/* GANTI DENGAN ICON FIGMA */}
+          <div className="w-10 h-10 rounded-xl bg-yellow-100 flex items-center justify-center text-xl">
+            🎓
+          </div>
+
+          <div>
+            <h3 className="text-[20px] font-black text-black">
+              Academic System
+            </h3>
+
+            <p className="text-[17px] font-medium text-slate-700">
+              siam.ub.ac.id
+            </p>
+
+            <p className="text-[15px] text-slate-500 mt-1">
+              Schedules, study plans, & grades
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
