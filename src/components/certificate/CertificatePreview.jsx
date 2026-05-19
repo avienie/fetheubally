@@ -50,7 +50,7 @@ const CertificatePreview = () => {
           <div className="grid grid-cols-3 items-end mt-12">
             {/* SIGN */}
             <div>
-              <p className="italic text-[28px]">Lavina M</p>
+              <p className="italic text-[28px]">The UB Ally</p>
               <div className="w-44 h-[3px] bg-[#D6A12E] mx-auto mt-2"></div>
               <p className="mt-2 text-[16px] font-black text-[#06255D]">
                 THE UB ALLY TEAM
@@ -79,7 +79,6 @@ const CertificatePreview = () => {
       {/* DOWNLOAD */}
       <button className="bg-[#D6A12E] hover:bg-[#C79420] transition rounded-[20px] py-5 shadow-md">
         <div className="flex items-center justify-center gap-3">
-          <Download size={26} className="text-[#06255D]" />
           <span className="text-[24px] font-black text-[#06255D]">
             DOWNLOAD YOUR CERTIFICATE
           </span>

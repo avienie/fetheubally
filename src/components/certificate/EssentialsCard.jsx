@@ -10,9 +10,7 @@ const EssentialsCard = () => {
 
       {/* SUBTEXT */}
       <p className="mt-4 text-[18px] leading-relaxed text-slate-600">
-        Stay connected and informed with these
-        <br />
-        official resources:
+        Stay connected and informed with these official resources:
       </p>
 
       {/* DIVIDER */}
@@ -23,7 +21,7 @@ const EssentialsCard = () => {
         {/* INSTAGRAM */}
         <div className="flex items-start gap-4">
           {/* GANTI DENGAN ICON FIGMA */}
-          <div className="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center text-xl">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl">
             📷
           </div>
 
@@ -45,7 +43,7 @@ const EssentialsCard = () => {
         {/* PORTAL */}
         <div className="flex items-start gap-4">
           {/* GANTI DENGAN ICON FIGMA */}
-          <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-xl">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl">
             🌐
           </div>
 
@@ -67,7 +65,7 @@ const EssentialsCard = () => {
         {/* ACADEMIC */}
         <div className="flex items-start gap-4">
           {/* GANTI DENGAN ICON FIGMA */}
-          <div className="w-10 h-10 rounded-xl bg-yellow-100 flex items-center justify-center text-xl">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl">
             🎓
           </div>
 
