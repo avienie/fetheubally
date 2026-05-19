@@ -1,27 +1,7 @@
-<<<<<<< HEAD
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
-import CertificatePage from "./pages/CertificatePage";
-
-function App() {
-  return (
-    <BrowserRouter>
-
-      <Routes>
-
-        <Route path="/" element={<LandingPage />} />
-
-        <Route path="/login" element={<LoginPage />} />
-
-        <Route path="/certificate" element={<CertificatePage />} />
-
-      </Routes>
-
-    </BrowserRouter>
-=======
-import { Routes, Route } from "react-router-dom";
 
 import DashboardPage1 from "./pages/DashboardPage1";
 import DashboardPage2 from "./pages/DashboardPage2";
@@ -30,13 +10,53 @@ import DashboardPage4 from "./pages/DashboardPage4";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<DashboardPage1 />} />
-      <Route path="/week2" element={<DashboardPage2 />} />
-      <Route path="/week3" element={<DashboardPage3 />} />
-      <Route path="/week4" element={<DashboardPage4 />} />
-    </Routes>
->>>>>>> origin/dev-laudy
+    <BrowserRouter>
+      <Routes>
+
+        {/* LANDING */}
+        <Route
+          path="/"
+          element={<LandingPage />}
+        />
+
+        {/* LOGIN */}
+        <Route
+          path="/login"
+          element={<LoginPage />}
+        />
+
+        {/* DASHBOARD DEFAULT */}
+        <Route
+          path="/dashboard"
+          element={<DashboardPage1 />}
+        />
+
+        {/* WEEK 1 */}
+        <Route
+          path="/dashboard/week1"
+          element={<DashboardPage1 />}
+        />
+
+        {/* WEEK 2 */}
+        <Route
+          path="/dashboard/week2"
+          element={<DashboardPage2 />}
+        />
+
+        {/* WEEK 3 */}
+        <Route
+          path="/dashboard/week3"
+          element={<DashboardPage3 />}
+        />
+
+        {/* WEEK 4 */}
+        <Route
+          path="/dashboard/week4"
+          element={<DashboardPage4 />}
+        />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
