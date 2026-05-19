@@ -1,6 +1,6 @@
 import { FaRocket } from "react-icons/fa";
 
-export default function LoginButton({ onClick, disabled }) {
+export default function LoginButton({ onClick, disabled, label }) {
   return (
     <button
       onClick={onClick}
@@ -11,7 +11,7 @@ export default function LoginButton({ onClick, disabled }) {
           : "bg-[#D4A02F] hover:opacity-90 cursor-pointer"
         }`}
     >
-      Start My Journey
+      {label || "Start My Journey"}
       <FaRocket />
     </button>
   );
