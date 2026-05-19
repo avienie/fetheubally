@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/shared/ProtectedRoute";
 
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
@@ -20,19 +21,19 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
 
-        <Route path="/dashboard" element={<DashboardPage1 />} />
-        <Route path="/dashboard/week1" element={<DashboardPage1 />} />
-        <Route path="/dashboard/week2" element={<DashboardPage2 />} />
-        <Route path="/dashboard/week3" element={<DashboardPage3 />} />
-        <Route path="/dashboard/week4" element={<DashboardPage4 />} />
+        <Route path="/dashboard" element={<ProtectedRoute mode="dashboard"><DashboardPage1 /></ProtectedRoute>} />
+        <Route path="/dashboard/week1" element={<ProtectedRoute mode="dashboard"><DashboardPage1 /></ProtectedRoute>} />
+        <Route path="/dashboard/week2" element={<ProtectedRoute mode="dashboard"><DashboardPage2 /></ProtectedRoute>} />
+        <Route path="/dashboard/week3" element={<ProtectedRoute mode="dashboard"><DashboardPage3 /></ProtectedRoute>} />
+        <Route path="/dashboard/week4" element={<ProtectedRoute mode="dashboard"><DashboardPage4 /></ProtectedRoute>} />
 
-        <Route path="/week1" element={<Week1Page />} />
-        <Route path="/week2" element={<Week2Page />} />
-        <Route path="/week3" element={<Week3Page />} />
-        <Route path="/week4" element={<Week4Page />} />
+        <Route path="/week1" element={<ProtectedRoute mode="dashboard"><Week1Page /></ProtectedRoute>} />
+        <Route path="/week2" element={<ProtectedRoute mode="dashboard"><Week2Page /></ProtectedRoute>} />
+        <Route path="/week3" element={<ProtectedRoute mode="dashboard"><Week3Page /></ProtectedRoute>} />
+        <Route path="/week4" element={<ProtectedRoute mode="dashboard"><Week4Page /></ProtectedRoute>} />
 
-        <Route path="/certificate" element={<CertificatePage />} />
-        <Route path="/result/:weekId" element={<ResultPage />} />
+        <Route path="/certificate" element={<ProtectedRoute mode="certificate"><CertificatePage /></ProtectedRoute>} />
+        <Route path="/result/:weekId" element={<ProtectedRoute mode="certificate"><ResultPage /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );

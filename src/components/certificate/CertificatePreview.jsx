@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import { GraduationCap, Award } from "lucide-react";
 import { useUser } from "../../context/UserContext";
+import html2canvas from "html2canvas";
 
 const CertificatePreview = () => {
   const { user } = useUser();
+  const certRef = useRef(null);
+
+  async function handleDownload() {
+    if (!certRef.current) return;
+    const canvas = await html2canvas(certRef.current, { scale: 2 });
+    const link = document.createElement("a");
+    link.download = `Certificate_${user?.name || "UBAlly"}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  }
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="bg-white border-[5px] border-[#06255D] rounded-[32px] shadow-md px-8 py-8">
+      {/* CERTIFICATE — ref untuk di-capture */}
+      <div ref={certRef} className="bg-white border-[5px] border-[#06255D] rounded-[32px] shadow-md px-8 py-8">
         <div className="text-center">
           <div className="w-16 h-16 rounded-full bg-[#06255D] flex items-center justify-center mx-auto">
             <GraduationCap size={28} className="text-[#D6A12E]" />
@@ -47,7 +59,12 @@ const CertificatePreview = () => {
           </div>
         </div>
       </div>
-      <button className="bg-[#D6A12E] hover:bg-[#C79420] transition rounded-[20px] py-5 shadow-md">
+
+      {/* DOWNLOAD BUTTON */}
+      <button
+        onClick={handleDownload}
+        className="bg-[#D6A12E] hover:bg-[#C79420] transition rounded-[20px] py-5 shadow-md"
+      >
         <span className="text-[24px] font-black text-[#06255D]">
           DOWNLOAD YOUR CERTIFICATE
         </span>
